@@ -1,5 +1,5 @@
 
-## Installation Steps (安装步骤)
+## Installation Steps
 
 unzip py_install_Vx.x.x.zip
 
