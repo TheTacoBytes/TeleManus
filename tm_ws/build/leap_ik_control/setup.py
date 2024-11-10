@@ -1,1 +1,0 @@
-/home/orin/TeleManus/tm_ws/src/leap_ik_control/setup.py

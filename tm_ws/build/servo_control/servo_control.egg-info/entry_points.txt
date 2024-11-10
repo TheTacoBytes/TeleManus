@@ -1,3 +1,0 @@
-[console_scripts]
-servo_control = servo_control.servo_sub:main
-
