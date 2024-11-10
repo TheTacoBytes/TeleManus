@@ -1,0 +1,16 @@
+[1.905s] Invoking command in '/home/orin/TeleManus/tm_ws/build/leap_ik_control': PYTHONPATH=/home/orin/TeleManus/tm_ws/build/leap_ik_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/TeleManus/tm_ws/install/leap_ik_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/orin/TeleManus/tm_ws/build/leap_ik_control/build --no-deps symlink_data
+[2.455s] running develop
+[2.787s] running egg_info
+[2.787s] writing leap_ik_control.egg-info/PKG-INFO
+[2.788s] writing dependency_links to leap_ik_control.egg-info/dependency_links.txt
+[2.788s] writing entry points to leap_ik_control.egg-info/entry_points.txt
+[2.788s] writing requirements to leap_ik_control.egg-info/requires.txt
+[2.789s] writing top-level names to leap_ik_control.egg-info/top_level.txt
+[2.792s] reading manifest file 'leap_ik_control.egg-info/SOURCES.txt'
+[2.793s] writing manifest file 'leap_ik_control.egg-info/SOURCES.txt'
+[2.796s] running build_ext
+[2.797s] Creating /home/orin/TeleManus/tm_ws/install/leap_ik_control/lib/python3.10/site-packages/leap-ik-control.egg-link (link to .)
+[2.798s] 
+[2.799s] Installed /home/orin/TeleManus/tm_ws/build/leap_ik_control
+[2.799s] running symlink_data
+[2.936s] Invoked command in '/home/orin/TeleManus/tm_ws/build/leap_ik_control' returned '0': PYTHONPATH=/home/orin/TeleManus/tm_ws/build/leap_ik_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/TeleManus/tm_ws/install/leap_ik_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/orin/TeleManus/tm_ws/build/leap_ik_control/build --no-deps symlink_data
