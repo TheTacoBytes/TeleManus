@@ -23,48 +23,32 @@ This project, TeleManus, uses a Leap Motion Controller to manipulate a 6-DOF rob
 1. Install system dependencies:
 
 ```
-sudo apt update && sudo apt install -y python3-pip libusb-1.0-0-dev 
+sudo apt update && sudo apt install -y python3-pip 
 ```
 
-2. Install [ROS 2 (Humble)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) for Ubuntu 22.04:
+2. Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) for Ubuntu 22.04 by following the official ROS installation guide.
+3. Be sure to complete all required setup steps, including adding the ROS 2 APT repository, setting up keys, and updating sources.
+4. Once you've completed the instructions from the link, install the ROS 2 desktop and additional tools:
+
 ```
 sudo apt install ros-humble-desktop
 
 sudo apt install python3-colcon-common-extensions
 ```
 
-3. Set up Python dependencies from `requirements.txt`:
+5. Set up Python dependencies from `requirements.txt`:
+
 ```
 pip install -r requirements.txt
 ```
 
-4. **STM32 Setup**: Follow the [STM32 Setup Instructions](https://github.com/TheTacoBytes/STM32-ROS-ExpansionBoard) to configure the STM32 microcontroller for use with Python.
+6. **STM32 Setup**: Follow the [STM32 Setup Instructions](https://github.com/TheTacoBytes/STM32-ROS-ExpansionBoard) to configure the STM32 microcontroller for use with Python.
 
 
 ### Step 2: Install Leap Motion SDK
 
 Follow these instructions from the Ultraleap documentation for Linux setup:  
 [Ultraleap Documentation for Linux](https://docs.ultraleap.com/linux/)
-
-#### Quick steps:
-
-1. Download and install the Leap Motion SDK for Linux.
-```
-wget https://developer.leapmotion.com/releases/Leap_Motion_Developer_Kit_4.1.0.tgz
-```
-
-2. Extract the downloaded package and navigate into the directory:
-```
-tar -xvf Leap_Motion_Developer_Kit_4.1.0.tgz
-cd Leap_Motion_Developer_Kit_4.1.0
-```
-
-3. Install the Leap Daemon to start capturing hand-tracking data:
-```
-sudo cp lib/libLeap.so /usr/lib/
-
-sudo ./install.sh
-```
 
 
 ### Step 3: Install Ultraleap Python Bindings
@@ -75,22 +59,42 @@ pip install git+https://github.com/ultraleap/leapc-python-bindings.git@2341c6c3d
 ```
 
 
-### Step 4: Run the TeleManus Nodes
+### Step 4: Set Up Leap Motion SDK and Python Bindings
 
-1. Start ROS and source the environment:
-```
-source /opt/ros/humble/setup.bash
-```
+1. Follow the official [Ultraleap Leap Motion setup instructions](https://github.com/ultraleap/leapc-python-bindings) to install the necessary SDK and Python bindings for Leap Motion control.
 
-2. Run the `leap_ik_control` package to calculate IK and publish servo commands:
-```
-ros2 run leap_ik_control leap_ik
-```
+### Step 5: Build and Run the TeleManus Nodes
 
-3. Run the `servo_control` package to receive the commands and control the STM32:
-```
-ros2 run servo_control servo_control
-```
+1. Build the workspace:
+    ```
+    mkdir ~/TeleManus
+    
+    cd ~/TeleManus
+
+    git clone https://github.com/TheTacoBytes/TeleManus.git .
+
+    cd ~/TeleManus/tm_ws
+    
+    colcon build
+    ```
+2.
+
+2. Source the environment:
+    ```
+    source /opt/ros/humble/setup.bash
+    source install/setup.bash  # Source the workspace after building
+    ```
+
+3. Run the `leap_ik_control` package to calculate IK and publish servo commands:
+    ```
+    ros2 run leap_ik_control leap_ik
+    ```
+
+4. Run the `servo_control` package to receive the commands and control the STM32:
+    ```
+    ros2 run servo_control servo_control
+    ```
+
 
 
 ## Usage Notes
