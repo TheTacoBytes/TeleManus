@@ -36,13 +36,22 @@ sudo apt install ros-humble-desktop
 sudo apt install python3-colcon-common-extensions
 ```
 
-5. Set up Python dependencies from `requirements.txt`:
+5. Clone the workspace:
+```
+mkdir ~/TeleManus
+    
+cd ~/TeleManus
+
+git clone https://github.com/TheTacoBytes/TeleManus.git .
+```
+    
+6. Set up Python dependencies from `requirements.txt`:
 
 ```
 pip install -r requirements.txt
 ```
 
-6. **STM32 Setup**: Follow the [STM32 Setup Instructions](https://github.com/TheTacoBytes/STM32-ROS-ExpansionBoard) to configure the STM32 microcontroller for use with Python.
+7. **STM32 Setup**: Follow the [STM32 Setup Instructions](https://github.com/TheTacoBytes/STM32-ROS-ExpansionBoard) to configure the STM32 microcontroller for use with Python.
 
 
 ### Step 2: Install Leap Motion SDK
@@ -50,34 +59,19 @@ pip install -r requirements.txt
 Follow these instructions from the Ultraleap documentation for Linux setup:  
 [Ultraleap Documentation for Linux](https://docs.ultraleap.com/linux/)
 
+### Step 3: Set Up Leap Motion SDK and Python Bindings
 
-### Step 3: Install Ultraleap Python Bindings
+Follow the official [Ultraleap Leap Motion setup instructions](https://github.com/ultraleap/leapc-python-bindings) to install the necessary SDK and Python bindings for Leap Motion control.
 
-To control the Leap Motion from Python, install the bindings from the GitHub repository:
-```
-pip install git+https://github.com/ultraleap/leapc-python-bindings.git@2341c6c3db5dc08236bb52890d8c43a224139694#egg=leap&subdirectory=leapc-python-api
-```
-
-
-### Step 4: Set Up Leap Motion SDK and Python Bindings
-
-1. Follow the official [Ultraleap Leap Motion setup instructions](https://github.com/ultraleap/leapc-python-bindings) to install the necessary SDK and Python bindings for Leap Motion control.
-
-### Step 5: Build and Run the TeleManus Nodes
+### Step 4: Build and Run the TeleManus Nodes
 
 1. Build the workspace:
     ```
-    mkdir ~/TeleManus
-    
-    cd ~/TeleManus
-
-    git clone https://github.com/TheTacoBytes/TeleManus.git .
-
     cd ~/TeleManus/tm_ws
     
     colcon build
     ```
-2.
+
 
 2. Source the environment:
     ```
