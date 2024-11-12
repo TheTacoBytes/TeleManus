@@ -29,6 +29,8 @@ sudo apt update && sudo apt install -y python3-pip libusb-1.0-0-dev
 2. Install [ROS 2 (Humble)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) for Ubuntu 22.04:
 ```
 sudo apt install ros-humble-desktop
+
+sudo apt install python3-colcon-common-extensions
 ```
 
 3. Set up Python dependencies from `requirements.txt`:
