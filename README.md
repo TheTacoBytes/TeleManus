@@ -61,7 +61,7 @@ Follow these instructions from the Ultraleap documentation for Linux setup:
 
 ### Step 3: Set Up Leap Motion SDK and Python Bindings
 
-Follow the official [Ultraleap Leap Motion setup instructions](https://github.com/ultraleap/leapc-python-bindings) to install the necessary SDK and Python bindings for Leap Motion control.
+Follow the official [Ultraleap Leap Motion setup instructions](https://github.com/ultraleap/leapc-python-bindings) to install the Python bindings for Leap Motion control.
 
 ### Step 4: Build and Run the TeleManus Nodes
 
