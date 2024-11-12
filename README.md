@@ -26,7 +26,7 @@ This project, TeleManus, uses a Leap Motion Controller to manipulate a 6-DOF rob
 sudo apt update && sudo apt install -y python3-pip libusb-1.0-0-dev 
 ```
 
-2. Install ROS 2 (Humble) for Ubuntu 22.04:
+2. Install [ROS 2 (Humble)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) for Ubuntu 22.04:
 ```
 sudo apt install ros-humble-desktop
 ```
